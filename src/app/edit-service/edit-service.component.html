@@ -1,0 +1,10 @@
+<form [formGroup]="editServiceForm">
+    <div class="form-group">
+      <label for="name" style="font-weight: bold; font-style: italic; font-size: 30px;">Name</label>
+      <input type="text" id="title" formControlName="title" class="form-control" />
+      <input type="text" id="description" formControlName="desc" class="form-control">
+      <input type="file" id="img" formControlName="img" class="form-control" />
+      <button routerLink="/dashboard/db-services" class="btn btn-dark" (click)="saveService()">Save</button>
+    </div>
+  </form>
+  

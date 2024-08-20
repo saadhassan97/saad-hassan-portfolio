@@ -1,0 +1,12 @@
+<div id="services">
+  <div *ngFor="let service of service" class="card " style="width: 20rem;">
+    <img [src]="'http://localhost:3000/' + service.img" alt="" class="card-img-top" />
+    <div class="card-title">{{ service.title }}</div>
+    <div class="card-text">
+      {{ service.desc }}
+    </div>
+    <a routerLink="/contact-me" class="btn btn-primary" style="width: 16rem"
+      >Contact Me</a
+    >
+  </div>
+</div>

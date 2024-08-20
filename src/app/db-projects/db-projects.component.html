@@ -1,0 +1,63 @@
+<h3
+  style="
+    color: #cfcfcf;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+  "
+>
+  projects
+</h3>
+<ul
+  id="services"
+  style="
+    color: #cfcfcf;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+    font-style: italic;
+  "
+>
+  @for(project of projects; track $index){
+  <li>
+    <img [src]="'http://localhost:3000/' + project.img" alt="" class="img" />
+    <div>
+      {{ project.title }}
+    </div>
+    <div>
+      {{ project.desc }}
+    </div>
+    <div>
+      {{ project.link }}
+    </div>
+    <div class="d-flex flex-row justify-content-center àlign-items-center mt-3">
+      <button
+        [routerLink]="'/edit-projects/' + project._id"
+        class="btn btn-primary me-2"
+        style="line-height: 100%"
+      >
+        Edit
+      </button>
+      <button (click)="deleteProjects(project._id)" class="btn btn-danger">
+        Delete
+      </button>
+    </div>
+  </li>
+  }
+</ul>
+
+<button
+  class="btn btn-primary"
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 47%;
+  "
+  [routerLink]="'/dashboard/add-project'"
+>
+  Add new project
+</button>

@@ -1,0 +1,25 @@
+@if(done){
+    <section class="home">
+        <div class="home-content">
+          <h1 id="title">
+            {{ home[1].title }} <br /><span id="desc1" class="highlight"
+              >{{ home[1].firstDesc }} {{ home[1].secondDesc }}</span
+            >
+          </h1>
+        </div>
+      </section>
+      
+      <section class="about-me">
+        <div class="container">
+          <h1 id="title">{{ home[0].title }}</h1>
+          <p id="desc1">
+            {{ home[0].firstDesc }}
+          </p>
+          <br />
+          <p id="desc2">
+            {{ home[0].secondDesc }}
+          </p>
+        </div>
+      </section>
+      
+}

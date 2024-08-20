@@ -1,0 +1,41 @@
+h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+  
+  .skills-list li {
+    color: #ededed;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #skills {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #skills li {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 10px 0px;
+    font-size: 17px;
+    width: 200px;
+  }
+  #skills li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  

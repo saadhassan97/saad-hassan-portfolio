@@ -1,0 +1,99 @@
+
+<div class="container">
+  <div class="row">
+    @if(done){
+    <div class="col">
+      <h2
+        style="
+          color: #cfcfcf;
+          font-size: 18px;
+          line-height: 1.6;
+          text-align: center;
+          font-weight: bold;
+          font-style: italic;
+        "
+      >
+        {{aboutme[0].title}}
+      </h2>
+      <p
+        style="
+          color: #cfcfcf;
+          font-size: 18px;
+          line-height: 1.6;
+          font-weight: bold;
+          font-style: italic;
+        "
+      >
+        {{aboutme[0].firstDesc}}
+      </p>
+      <p style="
+      color: #cfcfcf;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      font-style: italic;
+    "
+      >
+        {{aboutme[0].secondDesc }}
+      </p>
+      <br />
+      
+    </div>
+  }
+    <div class="col">
+      <h3
+        style="
+          color: #cfcfcf;
+          font-size: 18px;
+          line-height: 1.6;
+          font-weight: bold;
+          font-style: italic;
+          margin-top: 15px;
+          text-align: center;
+        "
+      >
+        Skills
+      </h3>
+      <ul
+        id="skills"
+        style="
+          color: #cfcfcf;
+          font-size: 18px;
+          line-height: 1.6;
+          font-weight: bold;
+          font-style: italic;
+        "
+      >
+        <li *ngFor="let skill of skills"><img [src]="'http://localhost:3000/' + skill.img" alt="">{{skill.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer>
+  <ul style="list-style: none;">
+    <li>
+      <a
+        href="https://www.facebook.com/profile.php?id=100009744999305"
+        target="_blank"
+        >Facebook</a
+      >
+    </li>
+    <li>
+      <a href="https://wa.me/201066232186" target="_blank"
+        >WhatsApp: +201066232186</a
+      >
+    </li>
+    <li>
+      <a href="mailto:saadhassansaad1997@gmail.com"
+        >Gmail: saadhassansaad1997"&#64;"gmail.com</a
+      >
+    </li>
+    <li>
+      <a href="https://github.com/saadhassan97" target="_blank">GitHub</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/saad-hassan-203496280/">LinkedIn</a>
+    </li>
+    <li>Address: Cairo Maadi </li>
+  </ul>
+</footer>

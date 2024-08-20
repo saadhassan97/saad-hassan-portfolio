@@ -1,0 +1,11 @@
+<form [formGroup]="editProjectForm">
+    <div class="form-group">
+      <label for="name" style="font-weight: bold; font-style: italic; font-size: 30px;">Name</label>
+      <input type="text" id="title" formControlName="title" class="form-control" />
+      <input type="file" id="img" formControlName="img" class="form-control" />
+      <input type="text" name="description" formControlName="desc" class="form-control">
+      <input type="text" name="link" formControlName="link" class="form-control">
+      <button routerLink="/dashboard/db-projects" class="btn btn-dark" (click)="saveProject()">Save</button>
+    </div>
+  </form>
+  

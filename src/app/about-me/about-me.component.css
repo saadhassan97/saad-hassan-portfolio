@@ -1,0 +1,81 @@
+section {
+  background-color: #181a1b;
+  color: #ededed;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+section h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+section p {
+  color: #cfcfcf;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.skills-list li {
+  color: #ededed;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  color: #7289da;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.contact-info a {
+  color: #7289da;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #181a1b;
+  color: #7289da;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+#skills {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills li {
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 0px;
+  font-size: 17px;
+  width: 200px;
+}
+#skills li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

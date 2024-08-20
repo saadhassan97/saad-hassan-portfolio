@@ -1,0 +1,25 @@
+<div id="projects">
+  <div *ngFor="let projects of project" class="card">
+    <img
+      [src]="'http://localhost:3000/' + projects.img"
+      alt=""
+      class="card-img-top"
+    />
+    <div class="card-title">{{ projects.title }}</div>
+    <div class="card-text">
+      {{ projects.desc }}
+    </div>
+    <!-- <div class="card-link">{{projects.link}}</div> -->
+    <div class="d-flex align-items-center flex-column w-100">
+      <a [href]="projects.link" target="_blank" class="github"
+        ><img
+          src="assets/GitHub-Mark-ea2971cee799.png"
+          alt=""
+          style="width: 50px; height: 50px"
+      /></a>
+      <a routerLink="/contact-me" class="btn btn-primary" style="width: 10rem"
+        >Contact Me</a
+      >
+    </div>
+  </div>
+</div>

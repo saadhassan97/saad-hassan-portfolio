@@ -1,0 +1,41 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" class="form-control">
+    <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="text-danger">
+      <div *ngIf="contactForm.get('name')?.hasError('required')">Name is required.</div>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email" class="form-control">
+    <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" class="text-danger">
+      <div *ngIf="contactForm.get('email')?.hasError('required')">Email is required.</div>
+      <div *ngIf="contactForm.get('email')?.hasError('email')">Please enter a valid email address.</div>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" formControlName="phone" class="form-control">
+    <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid" class="text-danger">
+      <div *ngIf="contactForm.get('phone')?.hasError('required')">Phone number is required.</div>
+      <div *ngIf="contactForm.get('phone')?.hasError('pattern')">Please enter a valid phone number.</div>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <label for="request">Brief for Your Request</label>
+    <textarea id="request" formControlName="request" class="form-control"></textarea>
+    <div *ngIf="contactForm.get('request')?.touched && contactForm.get('request')?.invalid" class="text-danger">
+      <div *ngIf="contactForm.get('request')?.hasError('required')">Brief for your request is required.</div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+</form>

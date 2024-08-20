@@ -1,0 +1,33 @@
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem; /* Increased padding for a better look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the items */
+  align-items: center; /* Vertically align the items */
+}
+
+nav ul li {
+  margin: 0 1.5rem; /* Increase the margin between items */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500; /* Make text slightly bolder */
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #7A96FF; /* Change text color on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Add a background color on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}

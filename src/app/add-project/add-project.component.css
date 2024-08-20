@@ -1,0 +1,12 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 400px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:#7A96FF ;
+    border-radius: 10px;
+    box-shadow: #7A96FF;
+    padding: 100px;
+}

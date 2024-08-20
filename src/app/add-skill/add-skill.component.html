@@ -1,0 +1,8 @@
+<form [formGroup]="addForm">
+  <div class="form-group">
+    <label for="name" style="font-weight: bold; font-style: italic; font-size: 30px; color: aliceblue;">Name</label>
+    <input type="text" id="name" formControlName="name" class="form-control" />
+    <input type="file" id="img" formControlName="img" class="form-control" />
+    <button routerLink="/dashboard/db-skills" class="btn btn-dark" (click)="saveSkill()">Save</button>
+  </div>
+</form>
