@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
+import { ApiSigninService } from './sign-in/api-signin.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DashboardGuard implements CanActivate {
-  constructor(private router: Router) {}
+  constructor(private apisignin: ApiSigninService , private router: Router) {}
 
   canActivate(): boolean {
+    if (!this.apisignin.checkAuth()) {
+      // Redirect to login page if not authenticated
+      this.router.navigate(['/signIn']);
+      return false;
+    }
     return true;
   }
 }

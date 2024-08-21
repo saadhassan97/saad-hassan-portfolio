@@ -5,7 +5,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashboardGuard } from './dashboard.guard.spec';
+import { DashboardGuard } from './dashboard.guard';
 import { ServicesComponent } from './services/services.component';
 import { ResumeComponent } from './resume/resume.component';
 import { EditSkillComponent } from './edit-skill/edit-skill.component';
@@ -33,16 +33,16 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'edit-skill/:id', component: EditSkillComponent },
-  { path: 'dashboard/contact-messages', component: ContactMessagesComponent },
-  { path: 'dashboard/db-skills', component: DbSkillsComponent },
-  { path: 'dashboard/db-projects', component: DbProjectsComponent },
-  { path: 'edit-projects/:id', component: EditProjectsComponent },
-  { path: 'dashboard/add-project', component: AddProjectComponent },
-  { path: 'dashboard/add-skill', component: AddSkillComponent },
-  { path: 'dashboard/db-services', component: DbServicesComponent },
-  { path: 'add-servic', component: AddServicComponent },
-  { path: 'edit-service/:id', component: EditServiceComponent },
-  { path: 'add-skill/:id', component: AddSkillComponent },
+  { path: 'dashboard/contact-messages', component: ContactMessagesComponent , canActivate: [DashboardGuard] },
+  { path: 'dashboard/db-skills', component: DbSkillsComponent , canActivate: [DashboardGuard] },
+  { path: 'dashboard/db-projects', component: DbProjectsComponent , canActivate: [DashboardGuard] },
+  { path: 'edit-projects/:id', component: EditProjectsComponent , canActivate: [DashboardGuard] },
+  { path: 'dashboard/add-project', component: AddProjectComponent , canActivate: [DashboardGuard] },
+  { path: 'dashboard/add-skill', component: AddSkillComponent , canActivate: [DashboardGuard] },
+  { path: 'dashboard/db-services', component: DbServicesComponent , canActivate: [DashboardGuard] },
+  { path: 'add-servic', component: AddServicComponent , canActivate: [DashboardGuard] },
+  { path: 'edit-service/:id', component: EditServiceComponent , canActivate: [DashboardGuard] },
+  { path: 'add-skill/:id', component: AddSkillComponent , canActivate: [DashboardGuard] },
   { path: 'signIn', component: SignInComponent },
 ];
 
