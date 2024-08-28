@@ -24,6 +24,7 @@ import { AddProjectComponent } from './add-project/add-project.component';
 import { EditServiceComponent } from './edit-service/edit-service.component';
 import { AddServicComponent } from './add-servic/add-servic.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ProjectsService } from './projects/projects.service';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ContactService, DashboardGuard],
+  providers: [ContactService, DashboardGuard, ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,7 +11,9 @@ import { ApiskillsService } from './apiskills.service';
 export class DbSkillsComponent implements OnInit {
   skills: Skill[] = [];
   fetch = inject(ApiskillsService);
+  deleteId : string | undefined = '';
   editMood = false;
+  
   editSkill() {
     this.editMood = !this.editMood;
   }
@@ -30,5 +32,8 @@ export class DbSkillsComponent implements OnInit {
         });
       });
     }
+  }
+  togleId (id: string|undefined) {
+    this.deleteId = id;
   }
 }

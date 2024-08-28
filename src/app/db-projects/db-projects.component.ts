@@ -8,27 +8,29 @@ import { Project } from '../projects/projects.service';
   styleUrl: './db-projects.component.css'
 })
 export class DbProjectsComponent implements OnInit {
-
-  project = inject(ProjectsService);
+constructor(private projectsService: ProjectsService) {}
   projects: Project [] = [];
-  fetch = inject(ProjectsService);
+  deleteId : string | undefined = '';
   editMood = false;
   updateProject() {
     this.editMood = !this.editMood;
   }
   ngOnInit() {
-    this.fetch.getAllprojects().subscribe((res) => {
+    this.projectsService.getAllprojects().subscribe((res) => {
       this.projects = res.data;
     });
   }
   deleteProjects(id: string|undefined) {
     if(id){
-      this.fetch.deleteProject(id).subscribe((res) => {
-        this.fetch.getAllprojects().subscribe((res) => {
+      this.projectsService.deleteProject(id).subscribe((res) => {
+        this.projectsService.getAllprojects().subscribe((res) => {
           this.projects = res.data;
         });
       });
     }
+  }
+  togleId (id: string|undefined) {
+    this.deleteId = id;
   }
 }
 

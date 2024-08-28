@@ -12,6 +12,7 @@ export class DbServicesComponent implements OnInit {
   service = inject(ApiservicesService);
   services: Service [] = [];
   fetch = inject(ApiservicesService);
+  deleteId : string | undefined = '';
   editMood = false;
   updateService() {
     this.editMood = !this.editMood;
@@ -29,5 +30,8 @@ export class DbServicesComponent implements OnInit {
         });
       });
     }
+  }
+  togleId (id: string|undefined) {
+    this.deleteId = id;
   }
 }
